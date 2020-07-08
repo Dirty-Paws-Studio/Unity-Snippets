@@ -36,3 +36,10 @@ The list is constantly in work and will be expanded as we continue working on ou
 ## UI
 
 - Easy Menu Manager (coming soon)
+
+
+---
+
+Written and maintained with <span style="color: red">❤</span> by [Dirty Paws Studio](https://dirtypaws.studio).
+
+[<img width="512" src="./_RepoImages/Dirty%20Paws%20Studio-Full-2048.png">](https://dirtypaws.studio).
