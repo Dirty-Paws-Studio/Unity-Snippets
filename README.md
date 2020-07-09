@@ -6,9 +6,6 @@ The list is constantly in work and will be expanded as we continue working on ou
 ## 2D
 - Parallax (coming soon)
 
-## Animation
-- Animator Controller Editor (coming soon).
-
 ## Audio
 
 - Audio Manager (coming soon)
@@ -18,9 +15,10 @@ The list is constantly in work and will be expanded as we continue working on ou
 - Coming Soon
 
 ## Editor
-
-- ReadOnly Attribute (coming soon)
-- [Palette Mesh Variant Editor](./Editor/Palette%20Mesh%20Variant%20Editor.md) - Custom editor window for repainting models based on a color palette.
+- Animator Controller Editor (coming soon).
+- [Palette Mesh Variant Editor](./Editor/Palette%20Mesh%20Variant%20Editor.md) - Editor window for repainting models based on a color palette.
+- [ReadOnlyField Attribute](./Editor/ReadOnlyFieldAttribute.md) - Attribute to make fields read-only in the inspector.
+- [Replace GameObjects with Prefab](./Editor/Replace%20GameObjects%20with%20Prefab.md) - Editor action for replacing GameObjects with prefab instances.
 
 ## GameObjects
 
