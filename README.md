@@ -16,9 +16,9 @@ The list is constantly in work and will be expanded as we continue working on ou
 
 ## Editor
 - Animator Controller Editor (coming soon).
-- [Palette Mesh Variant Editor](./Editor/Palette%20Mesh%20Variant%20Editor.md) - Editor window for repainting models based on a color palette.
-- [ReadOnlyField Attribute](./Editor/ReadOnlyFieldAttribute.md) - Attribute to make fields read-only in the inspector.
-- [Replace GameObjects with Prefab](./Editor/Replace%20GameObjects%20with%20Prefab.md) - Editor action for replacing GameObjects with prefab instances.
+- [Palette Mesh Variant Editor](./Editor/Palette%20Mesh%20Variant%20Editor) - Editor window for repainting models based on a color palette.
+- [ReadOnlyField Attribute](./Editor/ReadOnlyFieldAttribute) - Attribute to make fields read-only in the inspector.
+- [Replace GameObjects with Prefab](./Editor/Replace%20GameObjects%20with%20Prefab) - Editor action for replacing GameObjects with prefab instances.
 
 ## GameObjects
 
