@@ -4,7 +4,7 @@ An ongoing collection of useful snippets, components and tools for or related to
 The list is constantly in work and will be expanded as we continue working on our projects. Feel free to use the code for whatever you like! 😊
 
 ## 2D
-- Parallax (coming soon)
+- [Parallax (+ Infinite Scroll)](./2D/Parallax) - Layer-based Parallax movement and infinitely scrolling backgrounds.
 
 ## Audio
 
