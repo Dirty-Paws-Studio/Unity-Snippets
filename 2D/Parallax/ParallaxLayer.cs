@@ -15,13 +15,11 @@ public class ParallaxLayer : MonoBehaviour
     [Space(10)]
     [Tooltip(
         "Horizontal Speed. Higher values result in slower relative movement. 0 ... no parallax, 1 ... moves with camera.")]
-    [Min(0)]
     [SerializeField]
     private float speedX = 0;
 
     [Tooltip(
         "Vertical Speed. Higher values result in slower relative movement. 0 ... no parallax, 1 ... moves with camera.")]
-    [Min(0)]
     [SerializeField]
     private float speedY = 0;
 
@@ -32,7 +30,7 @@ public class ParallaxLayer : MonoBehaviour
 
     [Space(10)]
     [Tooltip(
-        "Enables horizontal infinite scrolling. This script must be placed on parent object with 3 children, aligned next to each other.")]
+        "Enables horizontal infinite scrolling. This script must be placed on parent object with >= 3 children, aligned next to each other.")]
     [SerializeField]
     private bool infiniteScroll = false;
 
@@ -82,18 +80,40 @@ public class ParallaxLayer : MonoBehaviour
             return;
         }
 
-        // Parallax Movement: Get delta position, scale it with direction and speed, apply
+        // Movement: Get delta position, scale it with direction and speed, apply
         var position = parallaxCamera.transform.position;
         var distance = position - _previousSourcePosition;
+        _previousSourcePosition = position;
 
+        // Perform both scrolling types
+        PerformParallaxScroll(distance);
+        PerformInfiniteScroll(position, distance);
+    }
+
+    private void PerformParallaxScroll(Vector3 distance)
+    {
         var direction = moveInOppositeDirection ? -1f : 1f;
         var movement = Vector3.Scale(distance, new Vector3(speedX, speedY)) * direction;
         transform.position += movement;
+    }
 
-        _previousSourcePosition = position;
+    private void PerformInfiniteScroll(Vector3 position, Vector3 distance)
+    {
+        // Infinite Scrolling.
+        if (!infiniteScroll)
+        {
+            return;
+        }
 
-        // Infinite Scrolling. Skip if unchecked or scrollSize could not be determined
-        if (!infiniteScroll || _scrollSize < 0.05f)
+        // If child count changed, update (onValidate is not triggered if a child is added)
+        // This check is only relevant when being in edit mode, so performance is not an issue.
+        if (_scrollingElements.Length != transform.childCount)
+        {
+            SetupScrolling();
+        }
+
+        // Skip if scrollSize could not be determined
+        if (_scrollSize < 0.05f)
         {
             return;
         }
@@ -179,10 +199,10 @@ public class ParallaxLayer : MonoBehaviour
 
         _scrollingElements = _scrollingElements.OrderBy(e => e.transform.position.x).ToArray();
 
-        if (_scrollingElements.Length != 3)
+        if (_scrollingElements.Length < 3)
         {
             Debug.LogWarning(
-                $"Incorrect number of child transforms for scrolling. Expected 3, got {_scrollingElements.Length}.");
+                $"Incorrect number of child transforms for scrolling. Expected >= 3, got {_scrollingElements.Length}.");
         }
 
         // Init indices
@@ -197,7 +217,6 @@ public class ParallaxLayer : MonoBehaviour
         else
         {
             _scrollSize = 0;
-            Debug.LogWarning("Could not determine scroll size as there is only one child transform.");
         }
     }
 
