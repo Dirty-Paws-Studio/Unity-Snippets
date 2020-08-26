@@ -4,6 +4,7 @@ An ongoing collection of useful snippets, components and tools for or related to
 The list is constantly in work and will be expanded as we continue working on our projects. Feel free to use the code for whatever you like! 😊
 
 ## 2D
+- [Dynamic Foliage (Wind and Wiggle)](./2D/Dynamic%20Foliage) - 2D wind movement and dynamic wiggling of grass and other vegegation.
 - [Parallax (+ Infinite Scroll)](./2D/Parallax) - Layer-based Parallax movement, with support for infinite scrolling backgrounds and precise placement of elements.
 
 ## Audio
