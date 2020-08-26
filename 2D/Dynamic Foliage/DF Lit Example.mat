@@ -10,7 +10,7 @@ Material:
   m_Name: DF Lit Example
   m_Shader: {fileID: -6465566751694194690, guid: 10b78bc7430d17b43bf0ce1ebdfa2b29,
     type: 3}
-  m_ShaderKeywords: 
+  m_ShaderKeywords: ETC1_EXTERNAL_ALPHA
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0

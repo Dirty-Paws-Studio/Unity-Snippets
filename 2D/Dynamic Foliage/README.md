@@ -20,7 +20,7 @@ Add one of the DF Lit/Unlit example materials below to your foliage sprite. This
 
 ![Dynamic Foliage Inspector](../../_RepoImages/2D/DynamicFoliageInspector.jpg)
 
-To add variance, such as different wind strengths and speeds, you can create multiple materials from the shader and adjust their parameters. In the grass example above, the grass consists of two sprites, with the one in the background having lower wind and wiggle strengths.
+You can adjust the wind and wiggle properties on the materials. To add variance, such as different wind strengths and speeds, you can create multiple materials from the shader and adjust their parameters. In the grass example above, the grass consists of two sprites, with the one in the background having lower wind and wiggle strengths.
 
 If an entity consists of two or more sprites, you can save a bit of performance by adding both script and trigger to the parent element, set the mode to *Multiple*, and add the child renderers to the *Targets* array.
 
