@@ -9,7 +9,7 @@ The list is constantly in work and will be expanded as we continue working on ou
 
 ## Audio
 
-- Audio Manager (coming soon)
+- [Audio Controller](./Audio/AudioController) - An audio manager for easily playing sound and music.
 
 ## Code: Extension Methods
 
